@@ -1,0 +1,36 @@
+<!-- <div class="login">
+  <h1>Login</h1>
+
+  <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <label>Email:</label>
+      <input type="email" placeholder="Email..." formControlName="email" />
+      <label>Password:</label>
+      <input type="password" placeholder="Password..." formControlName="password" />
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+  <p class="error-msg">{{externalErrorMsg}}</p>
+
+  <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
+</div> -->
+
+<div class="row justify-content mt-5 p-2 text">
+ <p class="error-msg">{{externalErrorMsg}}</p>
+ <div class="col-md-3"></div>
+ <div class="col-md-6">
+  <form (ngSubmit)="login()" [formGroup]="loginForm">   
+   <div class=" form-group">
+    <label for="email">email</label>
+    <input tupe="text " class="form-control" placeholder="Insert your Email" formControlName="email" required>
+   </div>
+   <div class=" form-group">
+    <label for="password">password</label>
+    <input tupe="text " class="form-control" placeholder="Insert the Password" formControlName="password" required>
+   </div>
+   <div class="form-group">
+    <button class="btn btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Login</button>
+   </div>   
+  <p>Don't have an account? <a [routerLink]="['/signup']">Create new account</a></p>
+  </form>
+ </div>
+ <div class ="col-md-3"></div>
+</div>

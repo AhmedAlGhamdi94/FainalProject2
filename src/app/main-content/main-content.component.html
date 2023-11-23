@@ -1,0 +1,10 @@
+<p>main-content works!</p>
+<!-- main-content.component.html -->
+<h2>Main Content</h2>
+<div *ngFor="let city of cities">
+  <img [src]="city.image" alt="{{ city.name }}" />
+  <h3>{{ city.name }}</h3>
+  <p>Climate: {{ city.climate }}</p>
+  <p>Population: {{ city.population }}</p>
+</div>
+
